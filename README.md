@@ -13,8 +13,8 @@ An online music player based on local library
 - JavaScript 
 
 ## The Process 
-- The site was intended for users to be able to listen to their favorite albums with no distractions whatsoever; mimiking what it would be like to listen to albums on a vinyl record player. 
-- Once a user imports their songs, using the [jsmediatags](https://github.com/aadsm/jsmediatags) library, relevant meta-data gets obtained. Using such data, external information about the track gets fetched from [last.fm](https://www.last.fm). 
+- The site was intended for users to be able to listen to their favorite albums with no distractions; mimiking what it would be like to listen to albums on a vinyl record player. 
+- Once a user imports their songs, using the [jsmediatags](https://github.com/aadsm/jsmediatags) library, relevant meta-data gets obtained. Using such data, external information about the track(s) gets fetched from [last.fm](https://www.last.fm). 
 - Afterwards, the fetched metadata along with the imported file, now converted to a blob file, gets stored into an object, pushed into an array, and finally saved on the indexed db. 
 
 # Live Demo
