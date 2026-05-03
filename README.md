@@ -21,10 +21,10 @@ An online music player based on local library
 - [View the site here](https://duj11.github.io/music-player/)
 
 ## Preview
-![App Screenshot](assets/screenshots/screenshot1.png)
-![App Screenshot](assets/screenshots/screenshot2.png)
-![App Screenshot](assets/screenshots/screenshot3.png)
-![App Screenshot](assets/screenshots/screenshot4.png)
+- ![App Screenshot](assets/screenshots/screenshot1.png)
+- ![App Screenshot](assets/screenshots/screenshot2.png)
+- ![App Screenshot](assets/screenshots/screenshot3.png)
+- ![App Screenshot](assets/screenshots/screenshot4.png)
 
 ## What Was Learned
 - Asynchronous programming coupled with fetching API's and handling the data obtained from them
