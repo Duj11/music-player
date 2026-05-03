@@ -1,0 +1,191 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --move-dist: -250px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+body{
+    background-color: lightyellow;
+}
+
+.container{
+  overflow: hidden;
+}
+
+.import-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-display-container {
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.library-container {
+  padding: 0 32px;
+  width: 100%;
+  height: 80vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.library {
+  width: 100%;
+  max-width: 1800px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  gap: 8px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-input {
+  cursor: pointer;
+  padding: 6px 12px;
+  display: inline-block;
+  background-color: burlywood;
+  margin: 32px;
+  font-size: 18px;
+}
+
+.library-container .album-cover {
+  cursor: pointer;
+}
+
+.library-container .album-cover img {
+  display: block;
+}
+
+.audio-display-container .album-cover {
+  cursor: pointer;
+  position: relative;
+  width: 500px;
+  height: 500px;
+ 
+}
+
+.audio-display-container .album-cover > img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.cover-slide{
+  animation: coverSlide 2.5s ease 1 forwards;
+}
+
+.disc {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  left: 50%;           
+  z-index: 1;         
+}
+
+.disc-playing {
+  animation: discPlay 4s linear infinite;
+}
+
+.internal-disc {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: 25%;
+  left: 25%;
+  overflow: hidden;
+}
+
+.internal-disc img {
+  height: 100%;
+  width: 100%;
+}
+
+.now-playing {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 64px;
+  font-size: 24px;
+}
+
+.container-slide{
+  animation: containerSlide 2.5s ease 1 forwards;
+}
+
+@keyframes containerSlide{
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(var(--move-dist));
+  }
+}
+
+@keyframes coverSlide {
+  0%    { transform: translateX(0); opacity: 1; }
+  70%   {opacity: 1;}
+  100%  { transform: translateX(-600px); opacity: 0;}
+}
+
+@keyframes discPlay {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+
+  :root{
+    --move-dist: -150px;
+  }
+  .audio-display-container .album-cover {
+    width: 300px;
+    height: 300px;
+  
+  }
+
+  .now-playing{
+    font-size: 18px;
+  }
+
+  .custom-input {
+    cursor: pointer;
+    padding: 6px 12px;
+    display: inline-block;
+    background-color: burlywood;
+    margin: 32px;
+    font-size: 16px;
+  }
+
+}

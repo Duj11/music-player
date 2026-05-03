@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container"> 
+            <div class="import-container">
+                <label class="custom-input" for="audio-input">Import Record(s)</label>
+                <input type="file" accept="audio/*" id="audio-input" multiple>
+            </div> 
+            <div class="audio-display-container"></div>    
+            <div class="library-container">
+                <div class="library"></div>
+                <div class="button-container">
+                    <label class="custom-input" for="audio-input">Import Record(s)</label>
+                    <input type="file" accept="audio/*" id="audio-input" multiple>
+                </div>
+            </div>
+            <div class="now-playing"></div>  
+        </div> 
+    </div>
+    <script src="/js/libs/jsmediatags.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
