@@ -64,7 +64,7 @@ async function loadRecords(){
 function getCover(album) {
   return album.track[0].fetchedMetaData?.album?.image?.[
     album.track[0].fetchedMetaData.album.image.length - 1
-  ]?.["#text"] || "assets/placeholder.jpg";
+  ]?.["#text"] || "/music-player/assets/placeholder.jpg";
 }
 
 
